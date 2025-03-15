@@ -150,16 +150,11 @@ app.get('*',(req,res) => {
 });
 
 
-connectDb()
-  .then(() => {
-    console.log("Database Connection established...");
+
     app.listen(PORT, () => {
       console.log(`Server is successfully listening the port ${PORT}..`);
     });
-  })
-  .catch((err) => {
-    console.log("Database Cannot be connected...",err);
-  });
+ 
 
 // app.use("/user",(req,res)=>{
 // try{
