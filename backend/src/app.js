@@ -19,7 +19,7 @@ const _dirname=path.resolve();
 
 app.use(
   cors({
-    origin:process.env.FRONT_URL,
+    origin:"https://dev-tinder-4j0e.onrender.com",
     credentials: true,
   })
 );
