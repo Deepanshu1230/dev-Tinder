@@ -158,7 +158,7 @@ connectDb()
     });
   })
   .catch((err) => {
-    console.log("Database Cannot be connected...");
+    console.log("Database Cannot be connected...",err);
   });
 
 // app.use("/user",(req,res)=>{
