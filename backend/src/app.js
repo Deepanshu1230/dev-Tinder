@@ -152,8 +152,11 @@ app.get('*',(req,res) => {
 
 
     app.listen(PORT, () => {
+      connectDb();
       console.log(`Server is successfully listening the port ${PORT}..`);
     });
+
+    
  
 
 // app.use("/user",(req,res)=>{
