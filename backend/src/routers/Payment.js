@@ -88,13 +88,13 @@ paymentrouter.post("/payment/webhook", async (req, res) => {
     //update the user as the premium user
 
 
-    if(req.body.even === "payment.captured"){
+    // if(req.body.even === "payment.captured"){
 
-    }
+    // }
 
-    if(req.body.event === "payment.failed"){
+    // if(req.body.event === "payment.failed"){
 
-    }
+    // }
 
 
     return res.status(200).json({msg:"Webhook recieved Successfully"})
