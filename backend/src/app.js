@@ -16,6 +16,7 @@ require("./utils/cronjob");
 const _dirname=path.resolve();
 
 
+app.use("/payment/webhook", express.raw({ type: "application/json" }));
 
 app.use(
   cors({
