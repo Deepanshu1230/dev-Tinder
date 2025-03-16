@@ -150,11 +150,19 @@ app.get('*',(req,res) => {
 });
 
 
-
+connectDb()
+  .then(() => {
+    console.log("Database Connection established...");
     app.listen(PORT, () => {
-      connectDb();
-      console.log(`Server is successfully listening the port ${PORT}..`);
+      console.log("Server is successfully listening the port 3000..");
     });
+  })
+  .catch((err) => {
+    console.log("Database Cannot be connected...");
+  });
+
+
+    
 
     
  

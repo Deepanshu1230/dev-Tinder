@@ -8,7 +8,7 @@ const connectDb = async () => {
   
       process.env.DB_CONNECTION_URL
      );
-     console.log("DataBase Connected");
+     
 
   }
   catch(err){
