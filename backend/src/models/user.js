@@ -78,6 +78,18 @@ const UserSchema = new mongoose.Schema(
         }
       },
     },
+
+    isPremium:{
+      type:Boolean,
+      defaut:false
+    },
+
+    membershipType:{
+      type:String
+    }
+
+
+
   },
   {
     timestamps: true,
