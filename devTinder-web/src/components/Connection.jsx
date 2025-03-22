@@ -48,9 +48,9 @@ const Connection = () => {
       </div>
       <div className="grid grid-cols-1  gap-6">
         {connection.map(
-          ({ firstName, lastName, photoUrl, about, age, gender }, index) => (
+          ({ _id , firstName, lastName, photoUrl, about, age, gender }) => (
             <div
-              key={index}
+              key={_id}
               className="flex flex-col md:flex-row bg-black gap-x-4 mt-6 rounded-xl p-3 border border-white items-center sm:items-start"
             >
               <div className="border-2 border-purple-400 rounded-full overflow-hidden w-[80px] h-[80px]">
