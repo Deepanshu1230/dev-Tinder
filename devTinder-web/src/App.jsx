@@ -13,6 +13,7 @@ import { ToastContainer, toast } from "react-toastify";
 import Connection from "./components/Connection";
 import Request from "./components/Request";
 import Premium from "./components/Premium";
+import Chat from "./components/Chat";
 import './index.css';
 
 const App = () => {
@@ -31,6 +32,7 @@ const App = () => {
                 <Route path="/Connection" element={<Connection />} />
                 <Route path="/Request" element={<Request />} />
                 <Route path="/Premium" element={<Premium />} />
+                <Route path="/chat/:targetUser" element={<Chat />} />
 
               </Route>
             </Routes>

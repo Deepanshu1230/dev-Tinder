@@ -7,6 +7,8 @@ const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const path=require("path");
 const PORT = process.env.PORT || 3000;
+const http=require("http");
+
 
 
 require('dotenv').config();
@@ -33,12 +35,16 @@ const requestRouter = require("./routers/request");
 const profileRouter = require("./routers/profile");
 const userRouter = require("./routers/user");
 const paymentrouter=require("./routers/Payment");
+const chatRouter=require("./routers/chat");
+const { initailiseSocket } = require("./utils/socket");
+
 
 app.use("/", authRouter);
 app.use("/", requestRouter);
 app.use("/", profileRouter);
 app.use("/", userRouter);
 app.use("/",paymentrouter);
+app.use("/",chatRouter);
 
 //Getting the EmailId
 // app.get("/user", async (req,res)=>{
@@ -145,6 +151,9 @@ app.use("/",paymentrouter);
 
 // });
 
+const server=http.createServer(app);
+initailiseSocket(server);
+
 app.use(express.static(path.join(_dirname,"/devTinder-web/dist")));
 app.get('*',(req,res) => {
   res.sendFile(path.resolve(_dirname,"devTinder-web","dist","index.html"))
@@ -154,7 +163,7 @@ app.get('*',(req,res) => {
 connectDb()
   .then(() => {
     console.log("Database Connection established...");
-    app.listen(PORT, () => {
+    server.listen(PORT, () => {
       console.log("Server is successfully listening the port 3000..");
     });
   })

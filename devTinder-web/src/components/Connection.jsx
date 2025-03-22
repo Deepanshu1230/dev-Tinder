@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addConnection } from "../utils/ConnectionSlice";
 import connectImage from "../images/Animation - 1741340749020.gif";
 import ColourfulText from "./ui/colourful-text";
+import { Link } from "react-router";
 
 const Connection = () => {
   const dispatch = useDispatch();
@@ -66,6 +67,11 @@ const Connection = () => {
                 <p className="font-semibold text-gray-400">{age}</p>
                 <p className="text-gray-300">{about}</p>
               </div>
+
+              <Link to={"/chat/" + _id}>
+                <button className="text-white font-bold bg-blue-400 rounded-lg px-4 py-2">Chat</button>
+                </Link>
+                
             </div>
           )
         )}
