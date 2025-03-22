@@ -59,7 +59,7 @@ const Login = () => {
   return (
     <div className="flex items-center justify-center min-h-screen  p-4">
       {/* Login Card */}
-      <div className="bg-black/40 backdrop-blur-lg border border-gray-700 shadow-xl rounded-xl p-8 w-96">
+      <div className={"bg-black/40 backdrop-blur-lg border border-gray-700 shadow-xl rounded-xl p-8 w-96 " + (Isloginform ? " " : " mt-24 mb-20")}>
         <h2 className="text-3xl font-extrabold text-white text-center mb-6">
           {Isloginform ? "Login" : "Signup"}
         </h2>

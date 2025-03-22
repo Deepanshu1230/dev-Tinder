@@ -34,9 +34,9 @@ const Connection = () => {
 
   if (connection.length === 0)
     return (
-      <div className="flex flex-col justify-center items-center mt-11 text-center">
+      <div className="flex flex-col justify-center items-center mt-32 mb-24 text-center">
         <img src={connectImage} className="w-60 h-60" />
-        <p className="text-lg text-gray-400">Make Connection</p>
+        <p className="text-2xl font-bold font-Whitney text-gray-400">Make Connection</p>
       </div>
     );
 

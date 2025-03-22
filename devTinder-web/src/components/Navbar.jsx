@@ -34,7 +34,7 @@ const Navbar = () => {
       <div className="navbar h-16 flex items-center px-6 ">
         {/* Left Side - Logo */}
         <div className="flex-1 flex items-center">
-          <img className="w-[50px] ml-3" src={Giraffe} alt="giraffe" />
+          <img className="w-[50px] ml-1" src={Giraffe} alt="giraffe" />
           <Link to="/feed" className="ml-3 text-2xl  font-extrabold text-white">
             DevTinder
           </Link>
@@ -43,8 +43,9 @@ const Navbar = () => {
         {/* Right Side - Profile Dropdown */}
         {user && (
           <div className="flex-none gap-2">
+            <p className="font-bold text-xl hidden md:flex">Welcome</p>
             <p className="font-bold text-xl">
-              Welcome <ColourfulText text={user.firstName} />
+              <ColourfulText text={user.firstName} />
             </p>
             <div className="dropdown dropdown-end mx-4">
               <div
@@ -53,8 +54,11 @@ const Navbar = () => {
                 className="btn btn-ghost btn-circle avatar hover:bg-blue-400 transition-all duration-500"
               >
                 <div className="relative w-10 h-10 overflow-hidden rounded-full">
-                  <img alt="User Profile" src={user.photoUrl} className="relative w-full object-left-top"/>
-                   
+                  <img
+                    alt="User Profile"
+                    src={user.photoUrl}
+                    className="relative w-full object-left-top"
+                  />
                 </div>
                 <div className="bg-green-400 w-2 rounded-full absolute  right-2 top-1 animate-bounce"></div>
               </div>
@@ -71,7 +75,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <a onClick={()=> navigate("/Connection")}>Connections</a>
+                  <a onClick={() => navigate("/Connection")}>Connections</a>
                 </li>
 
                 <li>
