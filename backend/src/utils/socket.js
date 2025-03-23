@@ -24,7 +24,7 @@ const initailiseSocket = (server) => {
     
     socket.on("joinchat", ({ firstName, userId, targetUser }) => {
       const room = SecretRoomId(firstName, userId, targetUser);
-      console.log(firstName + " Joining the room: " + room);
+      // console.log(firstName + " Joining the room: " + room);
 
       socket.join(room);
     });
@@ -34,7 +34,7 @@ const initailiseSocket = (server) => {
       async ({ firstName,lastName,photoUrl, userId, targetUser, text }) => {
         try {
           const room = SecretRoomId(firstName, userId, targetUser);
-          console.log(firstName + " " + text);
+          // console.log(firstName + " " + text);
 
           //Now we have to save the chat in the using the monogodb
           //Intially we need to check wther the connection exist or not

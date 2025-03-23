@@ -57,7 +57,7 @@ const UserSchema = new mongoose.Schema(
     },
     photoUrl: {
       type: String,
-      // default:"https://www.pnrao.com/wp-content/uploads/2023/06/dummy-user-male.jpg"
+      default:"https://www.pnrao.com/wp-content/uploads/2023/06/dummy-user-male.jpg",
       validate(value) {
         if (!validator.isURL(value)) {
           throw new Error("Invalid URL:" + value);
@@ -125,7 +125,7 @@ UserSchema.methods.ValidatePassword = async function (PasswordInputByUser) {
 //post mailer
 UserSchema.post("save", async function (doc) {
   try {
-    console.log("Doc", doc);
+    // console.log("Doc", doc);
 
 
     //creating the transporter
