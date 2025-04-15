@@ -57,7 +57,7 @@ const UserSchema = new mongoose.Schema(
     },
     photoUrl: {
       type: String,
-      default:"https://www.pnrao.com/wp-content/uploads/2023/06/dummy-user-male.jpg",
+      default:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF02Jj8T2t7PdkytAw42HDuuSz7yXguKn8Lg&s",
       validate(value) {
         if (!validator.isURL(value)) {
           throw new Error("Invalid URL:" + value);
